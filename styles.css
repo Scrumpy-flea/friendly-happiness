@@ -80,7 +80,7 @@ nav ul li a {
   color: palevioletred;
 }
 
-img {
+img .photo{
   height: 400px;
   width: 600px;
   padding: 10px 50px;
