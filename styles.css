@@ -81,8 +81,5 @@ nav ul li a {
 }
 
 img .photo{
-  max-height: 60px;
-  max-width: 80px;
   padding: 10px 50px;
-  overflow: scroll;
 }
