@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML</title>
+  <link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+  <header>
+  <h1 id="top">Welcome to my example of a working link.</h1>
+  <nav>
+    <ul class="navlist">
+      <li><a href="index.html" target="_blank">Back to home page.</a></li>
+    </ul>
+  </nav>
+</header>
+<hr>
+<body>
+  <h1>Please take a moment to fill out this short form:</h1>
+  <p>I am researching the usefulness of my website. I want know what users would like to get from my website. </p>
+   <form action="/example.html" method="POST">
+     <label for="reason">What information did you hope to find when visiting this website today?</label>
+     <input type="text" name="reason" id="reason">
+     <br>
+     <p>Did you find what you where looking for?</p>
+     <label for="yes">Strongly Agree</label>
+     <input type="checkbox" name="yes" id="find" value="yes">
+     <br>
+     <label for="neither">Neither agree nor disagree</label>
+     <input type="checkbox" name="neither" id="find" value="neither">
+     <br>
+     <label for="no">Strongly disagree</label>
+     <input type="checkbox" name="no" id="find" value="no">
+     <br>
+     <br>
+     <label for="time">How many minuets do you averagely spend on my website each visit?</label>
+     <input type="number" id="time" name="time" step="5" min="0" max="200">
+     <br>
+     <br>
+     <p>How often do you visit this website?</p>
+     <label for="often">Daily</label>
+     <input type="checkbox" id="often" name="daily"  value="daily">
+     <label for="often">Weekly</label>
+     <input type="checkbox" id="often" name="weekly" value="weekly">
+     <label for="often">Monthly</label>
+     <input type="checkbox" id="often" name="monthly" value="monthly">
+     <label for="often">Yearly</label>
+     <input type="checkbox" id="ofter" name="yearly" value="yearly">
+     <label for="often">This is my first visit</label>
+     <input type="checkbox" id="often" name="firstvisit" value="firstvisit">
+     <br>
+     <br>
+     <label for="tips">Do you have any suggestions for improvements?</label>
+     <input type="text" name="tips" id="tips" value="improvements, content to be added, other.">
+     <input type="submit" value="send">
+   </form>
+   <p>Thank you for taking the time to visit my webpage and complete this survey. I am always
+     looking for ways to improve my site and make it more user friendly. Please visit again soon.:) </p>
+
+</body>
+</html>

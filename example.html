@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Links</title>
+<link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+<header>
+  <h1 id="top">This page explains Forms</h1>
+  <nav>
+    <ul>
+      <li><a href="#input">Text input and labels</a></li>
+      <li><a href="#number">Number input</li>
+      <li><a href="#submit">Submit form</a></li>
+      <li><a href="#checkbox">Checkboxes</a></li>
+      <li>Dropdown list</li>
+      <li>Form Validation</li>
+      <li><a href="index.html">Back to Html</a></li>
+      <li><a href="openingcheetsheet.html">Back to homepage</a></li>
+    </ul>
+  </nav>
+</header>
+<body>
+<hr>
+
+
+<h2 id="form">Forms</h2>
+<ul>
+  <li>A form can be any type of input.</li>
+  <li>Forms are sent over the internet, which is essentially a network of computers that send and recieve informertion.</li>
+  <li>The hhtp request instructs recieving computer how to handle incoming information.</li>
+  <li>The form element is great for collecting information.</li>
+  <li>The element needs to be supplied with the location of where the form information will go, and what http request to make. eg:</li>
+</ul>
+<p><span>&lt;form action="example.html" method="POST"&gt; <br />&nbsp;  &nbsp;&lt;/form&gt;</span></p>
+<ul>
+  <li>Above is the skeleton of a form. It will send information to example.html as a post request. POST doesn't have to be in capitals, but it is good etiquette it do so.</li>
+  <ul>
+    <li>action decides where the information submitted is sent.</li>
+    <li>method is assigned a http verb that is included in the http request. It determines how information is sent and passed.</li>
+  </ul>
+  <li>&lt;form&gt; can contain child elements. Eg, a header (What the form is about, or even a paragraph for more detail). For Example:</li>
+</ul>
+<p><span>&lt;form action="/example.html" method="POST"&gt;<br />&nbsp;  &nbsp;&lt;h1&gt;Creating a form.&lt;/h1&gt;
+  <br />&nbsp;  &nbsp;&lt;p&gt;More information to read.&lt;/p&gt;<br />&lt;/form&gt;</span></p>
+  <ul>
+    <li>The code above included no user input, but it is the foundations of a form.</li>
+  </ul>
+    <br />
+    <hr>
+
+
+    <h2 id="input">Input</h2>
+    <ul>
+    <li>&lt;input&gt; now needs a type. This determines how it renders on a page and what type of data it can accept.</li>
+    <li>name is also needed. Otherwise the input won't be sent when the form is submitted.</li>
+    <li>So what is typed into the box is sent with the name value. Typed as text when the form is submitted.</li>
+    <li>So if 'important details' where typed into the box and sent. The text woule be:<br />
+    'first-text'='important details' is sent to /example.html</li>
+    <li>Because, the value of name is 'first-text' and the value of the value (textbox) is 'important details'.</li>
+    <li>You can assign a default value for the value attribute. So a pre-filled text field appears.</li>
+  </ul>
+  <p><span>&lt;form action="/example.html" method="POST"&gt;<br />&nbsp;  &nbsp;&lt;input type="text" name="first-text" value="already pre-filled"&gt;<br />&nbsp;  &nbsp;&lt;h1&gt;Creating a form.&lt;/h1&gt;
+    <br />&lt;/form&gt;</span></p>
+
+  <form action="/example.html" method="POST">
+    <input type="text" name="first-text" value="Already pre-filled">
+  </form>
+  <br />
+<hr>
+
+
+<h2>Labels</h2>
+<ul>
+  <li>We also need a label, so users know what they need to input.</li>
+  <li>Label has opening and closing tag. What is inbetween those tags renders on the webpage.</li>
+  <li>To associate the label and the input. We need to give the input an id.</li>
+  <li>We then assign the label a for. This tells the browser to link them together.</li>
+</ul>
+<p><span>&lt;form action="/exampla.html" method="POST"&gt;
+  <br>&nbsp;  &nbsp;&lt;label for="meal"&gt;What do you want to eat?&lt;/label&gt;
+  <br>&nbsp;  &nbsp; &lt;br&gt;
+  <br>&nbsp;  &nbsp;&lt;input type="text" name="food" id="meal"&gt;<br>&lt;/form&gt;</span></p>
+<p>The code above renders:</p>
+<form action="/exampla.html" method="POST">
+  <label for="flowers">Type of flowers planted?</label>
+  <br>
+  <input type="text" name="flowers" id="flowers">
+  </form>
+<br>
+<hr>
+
+<h2>Password</h2>
+<ul>
+  <li>When input type is set to password, the user doesn't see the characters they are inputing, they only see *.</li>
+  <li>When the information is being sent, it is sent as letters not the * the user can see.</li>
+</ul>
+<form>
+  <p><span>&lt;form&gt;<br>&nbsp;  &nbsp;&lt;label for="pin"&gt;Please enter your pin:&lt;/label&gt;<br>
+    &nbsp;  &nbsp;&lt;input id="pin" name="pin" type="password" &gt;<br>&lt;/form&gt;</span></p>
+  <p>Which renders...</p>
+  <label for="pin">Please enter your pin:</label>
+  <input id="pin" name="pin" type="password">
+</form>
+<br>
+<hr>
+
+
+<h2 id="number">Number input</h2>
+<ul>
+  <li>Allows only numbers and a few special characters. (Like -, + and .).</li>
+  <li>Use a step attribute, which creates arrows inside the input field to increase or decrease the value by our chosen step value.</li>
+</ul>
+<p><span>&lt;form&gt;<br>&nbsp;  &nbsp;&lt;label for="years"&gt;Years of experience&lt;/label&gt;<br>
+  &nbsp;  &nbsp;&lt;input id="years" name="years" type="number" step="1"&gt;<br>&lt;/form&gt;</span></p>
+<p>Which renders...</p>
+<form>
+  <label for="1hour">Red Mason bees spotted in 1 hour</label>
+  <input id="1hour" name="1hour" type="number" step="1">
+</form>
+<ul>
+  <li>Or by changing the type to range we can render a slider.</li>
+  <li>We need to add min and max values. This determines how low / high the number inputted can go.</li>
+  <li>Also the step attribute determines how big or little jumps the slider makes.</li>
+  <li>Eg,</li>
+</ul>
+<p><span>&lt;form&gt;<br>&nbsp;  &nbsp;&lt;label for="years"&gt;Years of experience&lt;/label&gt;<br>
+  &nbsp;  &nbsp;&lt;input id="years" name="years" type="range" min="0" max="20" step="1"&gt;<br>&lt;/form&gt;</span></p>
+<form>
+  <label for="1hour">Volume Control</label>
+  <input id="1hour" name="1hour" type="range" min="0" max="20" step="1">
+</form>
+<p>When the slider moves by one, the value of the input's value attribute changes.</p>
+<hr>
+<h2 id="checkbox">Checkbox</h2>
+<ul>
+  <li>Set the type value in the input element to checkbox.</li>
+  <li>Need to write an invidiual input and label tags for each checkbox.</li>
+  <li>Make sure you apply the same value for every "name" attriubute.</li>
+  <li>Also include a value attriubute for each checkbox. This is what information is sent with the form. (This won't be rendered on the page, Must use that label.)</li>
+  <li>Here is an example:</li>
+</ul>
+<p><span>&lt;form&gt;<br>&nbsp;  &nbsp;&lt;p&gt;Pizza Toppings&lt;/p&gt;<br>&nbsp;  &nbsp;
+    &lt;label for="cheese"&gt;Cheese&lt;/label&gt;<br>&nbsp;  &nbsp;
+    &lt;input id="cheese" name="topping" type="checkbox" value="cheese"&gt;<br>&nbsp;  &nbsp;
+  &lt;br&gt;<br>&nbsp;  &nbsp;
+  &lt;label for="tomato"&gt;Tomato&lt;/label&gt;<br>&nbsp;  &nbsp;
+  &lt;input id="tomato" name="topping" type="checkbox" value="tomato"&gt;<br>&nbsp;  &nbsp;
+  &lt;br&gt;<br>&nbsp;  &nbsp;
+  &lt;label for="mushroom"&gt;Mushrooms&lt;/label&gt;<br>&nbsp;  &nbsp;
+  &lt;input id="mushroom" name="topping" type="checkbox" value="mushroom"&gt;<br>&nbsp;  &nbsp;
+  &lt;label for="pepper"&gt;Peppers&lt;/label&gt;<br>&nbsp;  &nbsp;
+  &lt;input id="pepper" name="pepper" type="checkbox" value="pepper"&gt;
+   &lt;/form&gt;
+</span></p>
+<br>
+  <form>
+   <p>Pizza Toppings</p>
+    <label for="cheese">Cheese</label>
+    <input id="cheese" name="topping" type="checkbox" value="cheese">
+    <br>
+    <label for="tomato">Tomato</label>
+    <input id="tomato" name="topping" type="checkbox" value="tomato">
+    <br>
+    <label for="mushroom">Mushrooms</label>
+   <input id="mushroom" name="topping" type="checkbox" value="mushroom">
+   <label for="pepper">Pepper</label>
+   <input id="pepper" name="topping" type="checkbox" value="peper">
+</form>
+<ul>
+  <li>Notice we didn't add the break, between mushrooms and peppers. The browser renders the final checkbox next to the previous one, rather than underneith. </li>
+</ul>
+<hr>
+<h2 id="submit">Submit Button</h2>
+<ul>
+  <li>In a form, use input and set type to submit.</li>
+  <li>Whatever value you assign appears on the button.</li>
+  <li>Here is an example:</li>
+</ul>
+<p><span>&lt;form&gt;<br>&nbsp;  &nbsp;&lt;input type="submit" value="Send"&gt;
+  <br>&lt;/form&gt;</span></p>
+<form>
+  <input type="submit" value="send">
+</form>
+
+<hr>
+  <h2>Dropdown lists</h2>
+
+
+<hr>
+<nav>
+  <ul>
+    <li><a href="#top">Back to top of page!</a></li>
+    <li><a href="openingcheetsheet.html">Back to homepage</a></li>
+  </ul>
+</nav>
+</body>
+</html>
