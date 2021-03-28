@@ -81,5 +81,14 @@ nav ul li a {
 }
 
 img .photo{
+  height: 300px !important;
+  width: 500px !important;
   padding: 10px 50px;
+  border: 5px lightslategray solid;
+}
+img .photovertical{
+  height: 700px !important;
+  width: 500px !important;
+  padding: 10px 50px;
+  border: 5px lightslategrey solid;
 }
