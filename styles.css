@@ -96,3 +96,7 @@ img .photovertical{
   padding: 10px 50px;
   border: 5px lightslategrey solid;
 }
+
+button:hover {
+  color: blue;
+}
